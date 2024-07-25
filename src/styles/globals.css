@@ -1,0 +1,87 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --foreground-rgb: var(--primary-color);
+  --background-start-rgb: var(--background-color);
+  --background-end-rgb: var(--background-color);
+
+/*
+  --first: 0, 109, 119;
+  --second: 131, 197, 190;
+  --third: 237, 246, 249;
+  --fourth: 255, 221, 210;
+  --fifth: 226, 149, 120;
+*/
+  --first: 21, 23, 43;
+  --second: 141, 153, 174;
+  --third: 237, 242, 244;
+  --fourth: 239, 35, 60;
+  --fifth: 217, 4, 41;
+
+  --primary-color: rgb(var(--first));
+  --secondary-color: rgb(var(--second));
+  --third-color: rgb(var(--third));
+  --fourth-color: rgb(var(--fourth));
+  --fifth-color: rgb(var(--fifth));
+
+  --background-color: var(--third-color);
+  --font-color: var(--primary-color);
+  --sub-font-color: var(--secondary-color);
+  --accent-color: var(--fifth-color);
+  --light-accent-color: rgba(var(--fourth), 1);
+
+  --callout-rgb: rgba(var(--fourth), 0.5);
+  --callout-border-rgb: rgba(var(--fifth), 0.3);
+  --card-rgb: rgba(var(--second), 0.5);
+  --card-border-rgb: rgba(var(--first), 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: var(--primary-color);
+    --background-start-rgb: var(--background-color);
+    --background-end-rgb: var(--background-color);
+
+    --callout-rgb: rgba(var(--secondary-color), 0.5);  
+    --callout-border-rgb: rgba(var(--secondary-color), 0.3);
+    --card-rgb: rgba(var(--secondary-color), 0);
+    --card-border-rgb: rgba(var(--secondary-color), 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground-rgb);
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--background-end-rgb)
+    )
+    var(--background-start-rgb);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
